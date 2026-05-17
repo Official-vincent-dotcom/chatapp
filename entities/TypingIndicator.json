@@ -1,0 +1,19 @@
+{
+  "type": "object",
+  "properties": {
+    "conversation_id": {
+      "type": "string"
+    },
+    "user_id": {
+      "type": "string"
+    },
+    "is_typing": {
+      "type": "boolean"
+    },
+    "expires_at": {
+      "type": "string"
+    }
+  },
+  "required": [],
+  "name": "TypingIndicator"
+}

@@ -1,0 +1,29 @@
+{
+  "type": "object",
+  "properties": {
+    "recipient_id": {
+      "type": "string"
+    },
+    "sender_id": {
+      "type": "string"
+    },
+    "conversation_id": {
+      "type": "string"
+    },
+    "message_preview": {
+      "type": "string"
+    },
+    "is_read": {
+      "type": "boolean"
+    },
+    "notification_type": {
+      "type": "string",
+      "enum": [
+        "new_message",
+        "system"
+      ]
+    }
+  },
+  "required": [],
+  "name": "Notification"
+}

@@ -1,0 +1,28 @@
+{
+  "type": "object",
+  "properties": {
+    "user_id": {
+      "type": "string"
+    },
+    "username": {
+      "type": "string"
+    },
+    "bio": {
+      "type": "string"
+    },
+    "profile_picture": {
+      "type": "string"
+    },
+    "is_online": {
+      "type": "boolean"
+    },
+    "last_seen": {
+      "type": "string"
+    },
+    "email": {
+      "type": "string"
+    }
+  },
+  "required": [],
+  "name": "UserProfile"
+}

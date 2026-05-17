@@ -1,0 +1,25 @@
+{
+  "type": "object",
+  "properties": {
+    "participant_ids": {
+      "type": "array",
+      "items": {
+        "type": "string"
+      }
+    },
+    "last_message": {
+      "type": "string"
+    },
+    "last_message_time": {
+      "type": "string"
+    },
+    "last_message_sender_id": {
+      "type": "string"
+    },
+    "unread_count": {
+      "type": "object"
+    }
+  },
+  "required": [],
+  "name": "Conversation"
+}
