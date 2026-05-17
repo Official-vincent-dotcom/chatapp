@@ -1,51 +1,61 @@
-# ChatApp 💬
+# 💬 ChatApp
 
-A full-featured real-time messaging app inspired by WhatsApp, built with React and Base44.
+A full-featured WhatsApp-like real-time messaging application built with React and Base44.
 
 ## Features
 
-- 🔐 Authentication (signup/login)
-- 👤 User profiles with photo, bio, username
-- 💬 Real-time one-on-one messaging
-- ⌨️ Typing indicators (animated dots)
-- ✓✓ Message read receipts (blue ticks)
-- 📷 Image sharing with lightbox preview
-- 🟢 Online/offline presence + last seen
-- 🔔 In-app notifications with badge counter
-- 🔍 Search users and chats
-- 📱 Mobile-first WhatsApp-style UI
+- 🔐 **Authentication** — Sign up & login with email/password
+- 👤 **User Profiles** — Username, bio, profile picture
+- 💬 **Real-time Chat** — One-on-one messaging with live polling
+- ✓✓ **Read Receipts** — Blue double ticks when messages are read
+- ⌨️ **Typing Indicator** — Animated dots when someone is typing
+- 📷 **Image Sharing** — Send and preview images in chat
+- 🟢 **Online Presence** — See who's online and last seen time
+- 🔔 **In-app Notifications** — Badge alerts for new messages
+- 🔍 **Search** — Search chats and users
+- 📱 **Mobile-first UI** — WhatsApp-inspired green/teal design
 
-## Pages
+## Project Structure
 
-| Page | Description |
-|------|-------------|
-| `ChatsPage.jsx` | Conversation list with unread badges |
-| `ChatPage.jsx` | Real-time chat with typing, images, ticks |
-| `UsersPage.jsx` | User directory (online/offline) |
-| `ProfilePage.jsx` | Edit name, bio, profile photo |
-| `SettingsPage.jsx` | Account settings + logout |
-| `Layout.jsx` | Bottom nav + notification bell |
+```
+pages/
+  App.jsx              # Router & page wiring
+  Layout.jsx           # Bottom nav + notification bell
+  ChatsPage.jsx        # Conversation list
+  ChatPage.jsx         # Real-time chat UI
+  UsersPage.jsx        # User directory (online/offline)
+  ProfilePage.jsx      # Edit profile
+  SettingsPage.jsx     # Settings + logout
 
-## Backend Functions
+functions/
+  updatePresence.ts    # Online/offline tracking
+  sendMessage.ts       # Send messages + trigger notifications
+  startConversation.ts # Create or find 1-on-1 conversations
+  markMessagesRead.ts  # Mark messages read (blue ticks)
 
-| Function | Description |
-|----------|-------------|
-| `updatePresence.ts` | Track online/offline + last seen |
-| `sendMessage.ts` | Send messages + trigger notifications |
-| `startConversation.ts` | Find or create 1-on-1 conversation |
-| `markMessagesRead.ts` | Mark messages read (blue ticks) |
+entities/
+  UserProfile          # username, bio, photo, online status
+  Conversation         # participants, last message, timestamp
+  Message              # content, type, status, read_by
+  TypingIndicator      # real-time typing state
+  Notification         # in-app alerts
+```
 
-## Entities
+## Tech Stack
 
-- **UserProfile** — username, bio, photo, online status
-- **Conversation** — participants, last message, timestamp
-- **Message** — content, type, status, read_by
-- **TypingIndicator** — real-time typing state
-- **Notification** — in-app alerts
+- **Frontend:** React (JSX), Tailwind CSS
+- **Backend:** Deno (TypeScript serverless functions)
+- **Database:** Base44 managed entities
+- **Auth:** Base44 built-in authentication
+- **Real-time:** Polling (3–8s intervals)
 
-## Built with
+## Getting Started
 
-- React (JSX)
-- Base44 platform
-- Deno (backend functions)
-- TailwindCSS
+1. Clone this repo
+2. Import into [Base44](https://app.base44.com)
+3. Deploy backend functions
+4. Share your app URL and start chatting!
+
+---
+
+Built by Faluyi Funmilayo Toyin
